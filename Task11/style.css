@@ -17,6 +17,7 @@
     line-height: 36px;
     color: #222222;
     text-align: center;
+    margin-top: 96px;
 }
 
 .sub-title {
@@ -91,5 +92,9 @@
     background-color: white;
     border: 1px solid #FF6A6A;
     margin: auto;
-
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 95px;
+    margin-top: 49px;
 }
