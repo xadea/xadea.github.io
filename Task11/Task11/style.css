@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.main-title {
+    font-family: 'Franklin Gothic Medium';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 36px;
+    color: #222222;
+    text-align: center;
+    margin-top: 96px;
+}
+
+.sub-title {
+    font-family: 'Franklin Gothic Medium';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #9F9F9F;
+    text-align: center;
+    margin-top: 6px;
+    margin-bottom: 48px;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.item {
+    max-width: 360px;
+    max-height: 581px;
+    margin-bottom: 30px;
+    background: #F8F8F8;
+}
+
+.title {
+    font-family: 'Franklin Gothic Medium';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    color: #000000;
+    padding-left: 10px;
+    padding-top: 24px;
+}
+
+.description {
+    font-family: 'Franklin Gothic Medium';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    color: #5D5D5D;
+    padding-left: 10px;
+    padding-top: 12px;
+}
+
+.price {
+    font-family: 'Franklin Gothic Medium';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #F16D7F;
+    padding-left: 10px;
+    padding-top: 18px;
+    padding-bottom: 20px;
+}
+
+.button {
+    width: 211px;
+    height: 47px;
+    font-family: 'Franklin Gothic Medium';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #F26376;
+    text-align: center;
+    background-color: white;
+    border: 1px solid #FF6A6A;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 95px;
+    margin-top: 49px;
+}
