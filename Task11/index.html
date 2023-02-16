@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="main-title">Fetured Items</h2>
+        <p class="sub-title">Shop for items based on what we featured in this week</p>
+        <div class="content"></div>
+        <button class="button">Browse All Product</button>
+    </div>
+
+
+
+    <script src="data.js"></script>
+    <script>
+        const docEl = document.querySelector('.content');
+        const obj = JSON.parse(dataProducts);
+        console.log(obj);
+
+        obj.forEach((element) => {
+
+            const objectEl = document.createElement('div');
+            objectEl.classList.add('item');
+            docEl.appendChild(objectEl);
+
+            const imageEl = document.createElement('img');
+            imageEl.classList.add('photo');
+            imageEl.src = element.image;
+            objectEl.appendChild(imageEl);
+
+            const headerEl = document.createElement('h3');
+            headerEl.classList.add('title');
+            headerEl.textContent = element.name;
+            objectEl.appendChild(headerEl);
+
+            const textEl = document.createElement('p');
+            textEl.classList.add('description');
+            textEl.textContent = element.text;
+            objectEl.appendChild(textEl);
+
+            const priceEl = document.createElement('p');
+            priceEl.classList.add('price');
+            priceEl.textContent = "$ " + element.price;
+            objectEl.appendChild(priceEl);
+
+
+        });
+
+
+    </script>
+</body>
+
+</html>
