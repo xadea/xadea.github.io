@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="content">
+
+        <div class="videoplayer">
+            <div class="title">
+                <h1>Videoplayer</h1>
+            </div>
+            <div class="video">
+                <video class="vid" >
+                    <source src="https://webcode.tools/media/video.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="controls">
+                <img class="play" src="image/play.png" alt="play">
+                <div class="time-range">
+                    <span class="currentTime">00:00</span>
+                </div>
+                <input type="range" class="time_scale" value='0' min='0' step='0.001'>
+                <img class="volume_icon" src="image/volume.png" alt="volume">
+                <input type="range" class="volume" value='100' min='0' max='100' step='10'>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        const videoEl = document.querySelector('.vid');
+        const playEl = document.querySelector('.play');
+        const volumeEl = document.querySelector('.volume');
+        const timingEl = document.querySelector('.time_scale');
+        const currentTimeEl = document.querySelector('.currentTime');
+
+        playEl.addEventListener('click', function (e) {
+            if (videoEl.paused) {
+                videoEl.play();
+                playEl.setAttribute('src', 'image/pause.png');
+            } else {
+                videoEl.pause();
+                playEl.setAttribute('src', 'image/play.png');
+            }
+        });
+        videoEl.addEventListener('timeupdate', () => {
+            const minutes = Math.floor(videoEl.currentTime / 60);
+            const seconds = Math.floor(videoEl.currentTime - minutes * 60);
+            const minuteValue = minutes.toString().padStart(2, '0');
+            const secondValue = seconds.toString().padStart(2, '0');
+            const mediaTime = `${minuteValue}:${secondValue}`;
+            currentTimeEl.innerText = mediaTime;
+            timingEl.value = videoEl.currentTime;
+        });
+        timingEl.addEventListener('input', () => {
+            videoEl.currentTime = timingEl.value;
+        });
+        volumeEl.addEventListener('input', () => {
+            videoEl.volume = volumeEl.value;
+        });
+
+    </script>
+</body>
+
+</html>

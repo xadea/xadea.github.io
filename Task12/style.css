@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.title{
+    font-family: 'Franklin Gothic Medium';
+    font-size: 30px;
+    color: grey;
+    padding: 16px;
+}
+.videoplayer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+
+}
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; 
+    width: 40%;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+.time-range {
+    color: grey;
+    font-size: large;
+    padding: 15px;
+}
